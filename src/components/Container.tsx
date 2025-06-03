@@ -1,16 +1,20 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import "../css/Container.css";
 
-interface ContainerProps {
-  color: "brown" | "blue";
+interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
+  color: "brown" | "blue" | "";
   children: ReactNode;
-  id?: string;
-  className?: string;
 }
 
-function Container({ color, children, id, className }: ContainerProps) {
+function Container({
+  color,
+  children,
+  id,
+  className,
+  ...rest
+}: ContainerProps) {
   return (
-    <div className={"container " + color + " " + className} id={id}>
+    <div className={"container " + color + " " + className} id={id} {...rest}>
       {children}
     </div>
   );

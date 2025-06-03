@@ -4,19 +4,70 @@ html {
   background: black;
 }
 
+:root {
+  --blueBackground: radial-gradient(
+    circle,
+    rgba(1, 110, 191, 1) 0%,
+    rgba(0, 0, 0, 1) 200%
+  );
+  --purpleBackground: radial-gradient(
+    circle,
+    rgba(133, 0, 250, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 * {
   font-family: "Source Sans 3";
   font-weight: 600;
   box-sizing: border-box;
 }
 
-body {
-  background-image: url("../assets/BTD6Background.png");
-  position: absolute;
+.backgroundHexagons {
+  background-image: url("../assets/pattern.svg");
+  background-repeat: repeat;
+  background-size: 30px 60px;
+  opacity: 0.2;
+  background-position: center;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.backgroundGlow {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 1) 100%);
+  z-index: 1;
+}
+
+#pageBackground {
+  background: var(--blueBackground);
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+body {
+  background: black !important;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: max-content;
   padding: 3vh;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
+}
+
+nav.navbar {
+  z-index: 3;
 }

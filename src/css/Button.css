@@ -1,4 +1,5 @@
-button[type="button"] {
+button[type="button"],
+.buttonAppearance {
   border-radius: 16px;
   border: 6px solid white;
   outline-style: solid;
@@ -11,7 +12,14 @@ button[type="button"] {
   transition: 0.1s ease-in-out scale;
 }
 
-button[type="button"] > .text:not(.material-symbols-sharp) {
+button[type="button"]:has(.text.material-symbols-sharp),
+.buttonAppearance:has(.text.material-symbols-sharp) {
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 1vh white, 0 0 0.1vh black;
+}
+
+button[type="button"] > .text:not(.material-symbols-sharp),
+.buttonAppearance > .text:not(.material-symbols-sharp) {
   font-family: "Luckiest Guy";
   font-weight: 400;
 }
@@ -20,10 +28,10 @@ button[type="button"]:hover {
   scale: 1.1;
 }
 
-button[type="button"] .buttonTriangleShine {
+button[type="button"] .buttonTriangleShine,
+.buttonAppearance .buttonTriangleShine {
   position: absolute;
   left: 3px;
-  top: 3px;
   border-top-left-radius: 8px;
   aspect-ratio: 1 / 1;
   height: 70%;
@@ -44,28 +52,26 @@ button[type="button"] .buttonTriangleShine {
   background: white;
 }
 
-button[type="button"] > div.text:not(.material-symbols-sharp) {
-  position: relative;
-  top: 4px;
-}
-
-button[type="button"]:has(.text.material-symbols-sharp) {
+button[type="button"]:has(.text.material-symbols-sharp),
+.buttonAppearance:has(.text.material-symbols-sharp) {
   aspect-ratio: 1 / 1;
 }
 
-button[type="button"]:has(.text.material-symbols-sharp) .buttonTriangleShine {
+button[type="button"]:has(.text.material-symbols-sharp) .buttonTriangleShine,
+.buttonAppearance:has(.text.material-symbols-sharp) .buttonTriangleShine {
   height: 45%;
   border-top-left-radius: 10px;
 }
 
-button[type="button"] > div.text.material-symbols-sharp {
+button[type="button"] > div.text.material-symbols-sharp,
+.buttonAppearance > div.text.material-symbols-sharp {
   scale: 1.5;
   line-height: 0;
   position: relative;
-  top: 8px;
 }
 
-button[type="button"] .buttonForeground {
+button[type="button"] .buttonForeground,
+.buttonAppearance .buttonForeground {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -77,7 +83,8 @@ button[type="button"] .buttonForeground {
   z-index: 2;
 }
 
-button[type="button"].green {
+button[type="button"].green,
+.buttonAppearance.green {
   background: linear-gradient(
     180deg,
     rgba(113, 232, 0, 1) 0%,
@@ -85,11 +92,13 @@ button[type="button"].green {
   );
 }
 
-button[type="button"].green .buttonForeground {
+button[type="button"].green .buttonForeground,
+.buttonAppearance.green .buttonForeground {
   border-color: #209701;
 }
 
-button[type="button"].blue {
+button[type="button"].blue,
+.buttonAppearance.blue {
   background: linear-gradient(
     180deg,
     rgba(1, 221, 255, 1) 0%,
@@ -97,11 +106,13 @@ button[type="button"].blue {
   );
 }
 
-button[type="button"].blue .buttonForeground {
+button[type="button"].blue .buttonForeground,
+.buttonAppearance.blue .buttonForeground {
   border-color: #007dd1;
 }
 
-button[type="button"].yellow {
+button[type="button"].yellow,
+.buttonAppearance.yellow {
   background: linear-gradient(
     180deg,
     rgba(255, 221, 0, 1) 0%,
@@ -109,11 +120,13 @@ button[type="button"].yellow {
   );
 }
 
-button[type="button"].yellow .buttonForeground {
+button[type="button"].yellow .buttonForeground,
+.buttonAppearance.yellow .buttonForeground {
   border-color: #f48c0f;
 }
 
-button[type="button"].red {
+button[type="button"].red,
+.buttonAppearance.red {
   background: linear-gradient(
     180deg,
     rgba(250, 113, 0, 1) 0%,
@@ -121,7 +134,8 @@ button[type="button"].red {
   );
 }
 
-button[type="button"].red .buttonForeground {
+button[type="button"].red .buttonForeground,
+.buttonAppearance.red .buttonForeground {
   border-color: #a01c06;
 }
 

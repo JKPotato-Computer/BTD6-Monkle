@@ -1,4 +1,4 @@
-.container {
+.container:not(.guess) {
   background-color: white;
   border: 4px outset;
   outline: 2px solid;
@@ -12,6 +12,17 @@
   border-color: #cfad82;
 }
 
+.container.blue {
+  background: linear-gradient(
+    180deg,
+    rgba(105, 156, 219, 1) 0%,
+    rgba(76, 129, 208, 1) 100%
+  );
+  border: 2px solid #699dda !important;
+  outline: 2px solid #525c71;
+  color: white;
+}
+
 #titleContainer > span,
 #titleContainer > span * {
   font-family: "Luckiest Guy";
@@ -19,11 +30,6 @@
   font-weight: 400;
   color: white;
   -webkit-text-stroke: 1px black;
-}
-
-#titleContainer > span {
-  position: relative;
-  top: 8px;
 }
 
 #titleContainer > span > span:nth-child(1) {
@@ -46,4 +52,42 @@
   font-size: 20px;
   line-height: 24px;
   border-radius: 8px;
+}
+
+#expandMenu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #titleContainer > span,
+  #titleContainer > span * {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #titleContainer > span,
+  #titleContainer > span * {
+    font-size: 30px;
+  }
+
+  #contextMenu {
+    position: absolute;
+    right: 0;
+    top: 108px;
+  }
+
+  #expandMenu {
+    display: block;
+  }
+}
+
+.guess > span {
+  font-weight: 400;
+  font-family: "Luckiest Guy";
+  position: relative;
+}
+
+.guess {
+  outline: none;
 }
