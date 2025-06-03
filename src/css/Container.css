@@ -32,11 +32,6 @@
   -webkit-text-stroke: 1px black;
 }
 
-#titleContainer > span {
-  position: relative;
-  top: 8px;
-}
-
 #titleContainer > span > span:nth-child(1) {
   color: #00c5f4;
 }
@@ -74,7 +69,6 @@
   #titleContainer > span,
   #titleContainer > span * {
     font-size: 30px;
-    top: 4px;
   }
 
   #contextMenu {
@@ -91,7 +85,6 @@
 .guess > span {
   font-weight: 400;
   font-family: "Luckiest Guy";
-  top: 4px;
   position: relative;
 }
 

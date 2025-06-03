@@ -32,7 +32,6 @@ button[type="button"] .buttonTriangleShine,
 .buttonAppearance .buttonTriangleShine {
   position: absolute;
   left: 3px;
-  top: 3px;
   border-top-left-radius: 8px;
   aspect-ratio: 1 / 1;
   height: 70%;
@@ -53,12 +52,6 @@ button[type="button"] .buttonTriangleShine,
   background: white;
 }
 
-button[type="button"] > div.text:not(.material-symbols-sharp),
-.buttonAppearance > div.text:not(.material-symbols-sharp) {
-  position: relative;
-  top: 4px;
-}
-
 button[type="button"]:has(.text.material-symbols-sharp),
 .buttonAppearance:has(.text.material-symbols-sharp) {
   aspect-ratio: 1 / 1;
@@ -75,7 +68,6 @@ button[type="button"] > div.text.material-symbols-sharp,
   scale: 1.5;
   line-height: 0;
   position: relative;
-  top: 8px;
 }
 
 button[type="button"] .buttonForeground,
