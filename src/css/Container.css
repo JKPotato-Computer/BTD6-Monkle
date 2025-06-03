@@ -1,0 +1,49 @@
+.container {
+  background-color: white;
+  border: 4px outset;
+  outline: 2px solid;
+  width: max-content !important;
+  border-radius: 8px;
+}
+
+.container.brown {
+  background-color: #9e7842;
+  outline-color: #a5814f;
+  border-color: #cfad82;
+}
+
+#titleContainer > span,
+#titleContainer > span * {
+  font-family: "Luckiest Guy";
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+#titleContainer > span {
+  position: relative;
+  top: 8px;
+}
+
+#titleContainer > span > span:nth-child(1) {
+  color: #00c5f4;
+}
+
+#titleContainer > span > span:nth-child(2) {
+  color: #ffa108;
+}
+
+#titleContainer > span > span:nth-child(3) {
+  color: #ff3800;
+}
+
+.resetHolder {
+  background-color: rgb(0, 0, 0, 0.2);
+  color: white;
+  width: 128px;
+  height: max-content;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 8px;
+}

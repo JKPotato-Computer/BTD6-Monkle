@@ -1,0 +1,162 @@
+button[type="button"] {
+  border-radius: 16px;
+  border: 6px solid white;
+  outline-style: solid;
+  font-family: "Luckiest Guy";
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-size: 24px;
+  position: relative;
+  line-height: 24px;
+  transition: 0.1s ease-in-out scale;
+}
+
+button[type="button"] > .text:not(.material-symbols-sharp) {
+  font-family: "Luckiest Guy";
+  font-weight: 400;
+}
+
+button[type="button"]:hover {
+  scale: 1.1;
+}
+
+button[type="button"] .buttonTriangleShine {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  border-top-left-radius: 8px;
+  aspect-ratio: 1 / 1;
+  height: 70%;
+  clip-path: polygon(
+    0% 100%,
+    13% 40%,
+    17% 32%,
+    22% 26%,
+    23% 25%,
+    24% 24%,
+    25% 23%,
+    26% 22%,
+    32% 17%,
+    40% 13%,
+    100% 0%,
+    0% 0%
+  );
+  background: white;
+}
+
+button[type="button"] > div.text:not(.material-symbols-sharp) {
+  position: relative;
+  top: 4px;
+}
+
+button[type="button"]:has(.text.material-symbols-sharp) {
+  aspect-ratio: 1 / 1;
+}
+
+button[type="button"]:has(.text.material-symbols-sharp) .buttonTriangleShine {
+  height: 45%;
+  border-top-left-radius: 10px;
+}
+
+button[type="button"] > div.text.material-symbols-sharp {
+  scale: 1.5;
+  line-height: 0;
+  position: relative;
+  top: 8px;
+}
+
+button[type="button"] .buttonForeground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid;
+  outline: 4px solid rgb(30, 30, 30);
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+button[type="button"].green {
+  background: linear-gradient(
+    180deg,
+    rgba(113, 232, 0, 1) 0%,
+    rgba(55, 212, 0, 1) 100%
+  );
+}
+
+button[type="button"].green .buttonForeground {
+  border-color: #209701;
+}
+
+button[type="button"].blue {
+  background: linear-gradient(
+    180deg,
+    rgba(1, 221, 255, 1) 0%,
+    rgba(0, 192, 254, 1) 100%
+  );
+}
+
+button[type="button"].blue .buttonForeground {
+  border-color: #007dd1;
+}
+
+button[type="button"].yellow {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 221, 0, 1) 0%,
+    rgba(251, 173, 5, 1) 100%
+  );
+}
+
+button[type="button"].yellow .buttonForeground {
+  border-color: #f48c0f;
+}
+
+button[type="button"].red {
+  background: linear-gradient(
+    180deg,
+    rgba(250, 113, 0, 1) 0%,
+    rgba(213, 32, 1, 1) 100%
+  );
+}
+
+button[type="button"].red .buttonForeground {
+  border-color: #a01c06;
+}
+
+button[type="button"].green:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(90, 185, 0, 1) 0%,
+    /* darker green */ rgba(44, 170, 0, 1) 100%
+  );
+}
+
+button[type="button"].green:hover .buttonForeground {
+  border-color: #176b01; /* darker border */
+}
+
+button[type="button"].yellow:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(204, 178, 0, 1) 0%,
+    /* darker yellow */ rgba(201, 139, 3, 1) 100%
+  );
+}
+
+button[type="button"].yellow:hover .buttonForeground {
+  border-color: #b36a00; /* darker border */
+}
+
+button[type="button"].red:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(200, 90, 0, 1) 0%,
+    /* darker red */ rgba(170, 25, 0, 1) 100%
+  );
+}
+
+button[type="button"].red:hover .buttonForeground {
+  border-color: #701203; /* darker border */
+}

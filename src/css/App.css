@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+html {
+  background: black;
+}
+
+* {
+  font-family: "Source Sans 3";
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/BTD6Background.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3vh;
+}
