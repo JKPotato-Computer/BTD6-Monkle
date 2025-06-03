@@ -1,0 +1,13 @@
+#selectMonkeyUpgrades {
+  position: relative;
+  height: 300px;
+  aspect-ratio: 2 / 1;
+  background: var(--purpleBackground);
+}
+
+.rotatingQuincy {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 25%);
+}

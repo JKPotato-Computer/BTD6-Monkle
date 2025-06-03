@@ -10,7 +10,10 @@ interface CurrencyProps {
 function Currency({ type, currency }: CurrencyProps) {
   return (
     <Container color="brown" className="currencyHolder">
-      <span className="text currencyVal">${currency}</span>
+      <span className={"text currencyVal " + type.toLowerCase()}>
+        <span>{type}:</span>
+        {" " + currency}
+      </span>
     </Container>
   );
 }

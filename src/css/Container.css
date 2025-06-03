@@ -1,4 +1,4 @@
-.container {
+.container:not(.guess) {
   background-color: white;
   border: 4px outset;
   outline: 2px solid;
@@ -10,6 +10,17 @@
   background-color: #9e7842;
   outline-color: #a5814f;
   border-color: #cfad82;
+}
+
+.container.blue {
+  background: linear-gradient(
+    180deg,
+    rgba(105, 156, 219, 1) 0%,
+    rgba(76, 129, 208, 1) 100%
+  );
+  border: 2px solid #699dda !important;
+  outline: 2px solid #525c71;
+  color: white;
 }
 
 #titleContainer > span,
@@ -46,4 +57,44 @@
   font-size: 20px;
   line-height: 24px;
   border-radius: 8px;
+}
+
+#expandMenu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #titleContainer > span,
+  #titleContainer > span * {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #titleContainer > span,
+  #titleContainer > span * {
+    font-size: 30px;
+    top: 4px;
+  }
+
+  #contextMenu {
+    position: absolute;
+    right: 0;
+    top: 108px;
+  }
+
+  #expandMenu {
+    display: block;
+  }
+}
+
+.guess > span {
+  font-weight: 400;
+  font-family: "Luckiest Guy";
+  top: 4px;
+  position: relative;
+}
+
+.guess {
+  outline: none;
 }
