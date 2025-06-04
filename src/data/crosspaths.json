@@ -1,0 +1,437 @@
+{
+    "DartMonkey": {
+      "category": "primary",
+      "name": "Dart Monkey",
+      "img": "src/assets/DartMonkey.webp",
+      "0-0-0": {
+        "damage": 1,
+        "pierce": 2,
+        "attackSpeed": 0.95,
+        "range": 32,
+        "attackType": [
+          "sharp"
+        ]
+      },
+      "1-0-0": {
+        "pierce": 3,
+        "upgradeName": "Sharp Shots"
+      },
+      "2-0-0": {
+        "pierce": 5,
+        "upgradeName": "Razor Sharp Shots"
+      },
+      "3-0-0": {
+        "attackSpeed": 1.15,
+        "range": 36.8,
+        "damage": 2,
+        "pierce": 18,
+        "upgradeName": "Spike-O-Pult"
+      },
+      "4-0-0": {
+        "attackSpeed": 1,
+        "pierce": 60,
+        "damage": 2,
+        "hasBloonEffect": true,
+        "upgradeName": "Juggernaut"
+      },
+      "5-0-0": {
+        "damage": 5,
+        "pierce": 210,
+        "hasBloonEffect": true,
+        "upgradeName": "Ultra-Juggernaut"
+      },
+      "0-1-0": {
+        "attackSpeed": 0.8075,
+        "upgradeName": "Quick Shots"
+      },
+      "0-2-0": {
+        "attackSpeed": 0.6365,
+        "upgradeName": "Very Quick Shots"
+      },
+      "0-3-0": {
+        "damage": 3,
+        "pierce": 6,
+        "upgradeName": "Triple Shot"
+      },
+      "0-4-0": {
+        "attackSpeed": 0.475,
+        "upgradeName": "Super Monkey Fan Club",
+        "hasAbility": true,
+        "hasTowerEffect": true
+      },
+      "0-5-0": {
+        "upgradeName": "Plasma Monkey Fan Club",
+        "hasAbility": true,
+        "hasTowerEffect": true
+      },
+      "0-0-1": {
+        "range": 40,
+        "upgradeName": "Long Range Darts"
+      },
+      "0-0-2": {
+        "range": 48,
+        "upgradeName": "Enhanced Eyesight"
+      },
+      "0-0-3": {
+        "range": 60,
+        "pierce": 3,
+        "damage": 3,
+        "upgradeName": "Crossbow"
+      },
+      "0-0-4": {
+        "damage": 6,
+        "attackSpeed": 0.475,
+        "hasBloonEffect": true,
+        "upgradeName": "Sharp Shooter"
+      },
+      "0-0-5": {
+        "damage": 8,
+        "attackSpeed": 0.2375,
+        "pierce": 8,
+        "range": 80,
+        "hasBloonEffect": true,
+        "upgradeName": "Crossbow Master"
+      },
+      "1-1-0": {
+        "pierce": 3,
+        "attackSpeed": 0.8075
+      },
+      "1-2-0": {
+        "pierce": 3,
+        "attackSpeed": 0.6365
+      },
+      "2-1-0": {
+        "pierce": 5,
+        "attackSpeed": 0.8075
+      },
+      "2-2-0": {
+        "pierce": 5,
+        "attackSpeed": 0.6365
+      },
+      "3-1-0": {
+        "attackSpeed": 0.977,
+        "range": 36.8
+      },
+      "3-2-0": {
+        "attackSpeed": 0.752,
+        "range": 36.8
+      },
+      "4-1-0": {
+        "attackSpeed": 0.85
+      },
+      "4-2-0": {
+        "attackSpeed": 0.68
+      },
+      "5-1-0": {
+        "attackSpeed": 0.8075
+      },
+      "5-2-0": {
+        "attackSpeed": 0.6365
+      },
+      "1-0-1": {
+        "pierce": 3,
+        "range": 40
+      },
+      "1-0-2": {
+        "pierce": 3,
+        "range": 48
+      },
+      "2-0-1": {
+        "pierce": 5,
+        "range": 40
+      },
+      "2-0-2": {
+        "pierce": 5,
+        "range": 48
+      },
+      "3-0-1": {
+        "range": 44.8
+      },
+      "3-0-2": {
+        "range": 52.8
+      },
+      "4-0-1": {
+        "range": 52.8
+      },
+      "4-0-2": {
+        "range": 60.8
+      },
+      "5-0-1": {
+        "range": 88
+      },
+      "5-0-2": {
+        "range": 96
+      },
+      "0-1-1": {
+        "attackSpeed": 0.8075,
+        "range": 40
+      },
+      "0-1-2": {
+        "attackSpeed": 0.8075,
+        "range": 48
+      },
+      "0-2-1": {
+        "attackSpeed": 0.6365,
+        "range": 40
+      },
+      "0-2-2": {
+        "attackSpeed": 0.6365,
+        "range": 48
+      },
+      "0-3-1": {
+        "range": 60,
+        "damage": 3,
+        "pierce": 6
+      },
+      "0-3-2": {
+        "range": 60,
+        "damage": 3,
+        "pierce": 6
+      },
+      "0-4-1": {
+        "attackSpeed": 0.475,
+        "range": 60
+      },
+      "0-4-2": {
+        "attackSpeed": 0.475,
+        "range": 60
+      },
+      "0-5-1": {
+        "range": 80
+      },
+      "0-5-2": {
+        "range": 80
+      }
+    },
+    "BoomerangMonkey": {
+      "category": "primary",
+      "name": "Boomerang Monkey",
+      "img": "src/assets/BoomerangMonkey.png",
+      "0-0-0": {
+        "damage": 1,
+        "pierce": 3,
+        "attackSpeed": 1,
+        "range": 40,
+        "attackType": [
+          "sharp"
+        ]
+      },
+      "1-0-0": {
+        "pierce": 8,
+        "upgradeName": "Improved Rangs"
+      },
+      "2-0-0": {
+        "pierce": 13,
+        "upgradeName": "Glaives"
+      },
+      "3-0-0": {
+        "pierce": 30,
+        "upgradeName": "Glaive Ricochet"
+      },
+      "4-0-0": {
+        "pierce": 80,
+        "attackSpeed": 0.333,
+        "upgradeName": "M.O.A.R Glaves"
+      },
+      "5-0-0": {
+        "damage": 6,
+        "pierce": 100,
+        "attackSpeed": 0.4,
+        "hasBloonEffect": true,
+        "upgradeName": "Glaive Lord"
+      },
+      "0-1-0": {
+        "attackSpeed": 0.75,
+        "upgradeName": "Faster Throwing"
+      },
+      "0-2-0": {
+        "attackSpeed": 0.675,
+        "upgradeName": "Faster Rangs"
+      },
+      "0-3-0": {
+        "attackSpeed": 0.238,
+        "upgradeName": "Bionic Boomerang"
+      },
+      "0-4-0": {
+        "hasAbility": true,
+        "upgradeName": "Turbo Charge"
+      },
+      "0-5-0": {
+        "damage": 4,
+        "attackSpeed": 0.034,
+        "hasAbility": true,
+        "upgradeName": "Perma Charge"
+      },
+      "0-0-1": {
+        "range": 54.19,
+        "upgradeName": "Long Range Rangs"
+      },
+      "0-0-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true,
+        "upgradeName": "Red Hot Rangs"
+      },
+      "0-0-3": {
+        "pierce": 18,
+        "hasBloonEffect": true,
+        "upgradeName": "Kylie Boomerang"
+      },
+      "0-0-4": {
+        "pierce": 200,
+        "hasBloonEffect": true,
+        "upgradeName": "MOAR Press"
+      },
+      "0-0-5": {
+        "damage": 10,
+        "pierce": 236,
+        "attackSpeed": 0.5,
+        "hasBloonEffect": true,
+        "upgradeName": "MOAB Domination"
+      },
+      "1-1-0": {
+        "pierce": 8,
+        "attackSpeed": 0.75
+      },
+      "1-2-0": {
+        "pierce": 8,
+        "attackSpeed": 0.675
+      },
+      "2-1-0": {
+        "pierce": 13,
+        "attackSpeed": 0.75
+      },
+      "2-2-0": {
+        "pierce": 13,
+        "attackSpeed": 0.675
+      },
+      "3-1-0": {
+        "attackSpeed": 0.238
+      },
+      "3-2-0": {
+        "attackSpeed": 0.214
+      },
+      "4-1-0": {
+        "attackSpeed": 0.25
+      },
+      "4-2-0": {
+        "attackSpeed": 0.225
+      },
+      "5-1-0": {
+        "attackSpeed": 0.32
+      },
+      "5-2-0": {
+        "attackSpeed": 0.28
+      },
+      "1-0-1": {
+        "pierce": 8,
+        "range": 54.19
+      },
+      "1-0-2": {
+        "pierce": 8,
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "2-0-1": {
+        "pierce": 13,
+        "range": 54.19
+      },
+      "2-0-2": {
+        "pierce": 13,
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "3-0-1": {
+        "range": 54.19
+      },
+      "3-0-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "4-0-1": {
+        "range": 54.19
+      },
+      "4-0-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "5-0-1": {
+        "range": 54.19
+      },
+      "5-0-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "0-1-1": {
+        "attackSpeed": 0.75,
+        "range": 54.19
+      },
+      "0-1-2": {
+        "attackSpeed": 0.75,
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "0-2-1": {
+        "attackSpeed": 0.675,
+        "range": 54.19
+      },
+      "0-2-2": {
+        "attackSpeed": 0.675,
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "0-3-1": {
+        "range": 54.19
+      },
+      "0-3-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "0-4-1": {
+        "range": 54.19
+      },
+      "0-4-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      },
+      "0-5-1": {
+        "range": 54.19
+      },
+      "0-5-2": {
+        "attackType": [
+          "sharp",
+          "fire"
+        ],
+        "hasBloonEffect": true
+      }
+    }
+  }

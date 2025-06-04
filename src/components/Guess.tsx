@@ -11,6 +11,11 @@ function Guess() {
         <GuessPoint item="Damage" color="yellow" value={50} />
         <GuessPoint item="Pierce" color="red" value={40} />
         <GuessPoint item="Range" color="red" value={30} />
+        <GuessPoint
+          item="Attack Type"
+          color="red"
+          value={["Sharp", "Energy"]}
+        />
         <div className="gap-2 align-items-center justify-content-center">
           <GuessPoint
             item="AffectsBloons"
@@ -26,7 +31,7 @@ function Guess() {
           />
           <GuessPoint
             item="HasAbility"
-            color="green"
+            color="yellow"
             value={true}
             isVisible={false}
           />
