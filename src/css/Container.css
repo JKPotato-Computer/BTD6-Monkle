@@ -109,6 +109,10 @@
   align-items: center;
 }
 
+.checkGuess > .buttonTriangleShine {
+  height: 30%;
+}
+
 #guessesMade {
   height: 100%;
 }

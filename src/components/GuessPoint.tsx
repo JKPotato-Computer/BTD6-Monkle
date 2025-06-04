@@ -11,8 +11,9 @@ interface GuessProps {
     | "Class"
     | "AffectsBloons"
     | "AffectsTowers"
-    | "HasAbility";
-  value: string | number | boolean;
+    | "HasAbility"
+    | "Attack Type";
+  value: string | number | boolean | string[];
   isVisible?: boolean;
 }
 
@@ -77,7 +78,13 @@ function GuessPoint({ color, item, value, isVisible }: GuessProps) {
       <div className="buttonForeground"></div>
       <div className="buttonTriangleShine"></div>
       <span>
-        {item}:{" " + value}
+        {item}:
+        {" " +
+          (typeof value == "object"
+            ? value.map((item) => {
+                return " " + item;
+              })
+            : value)}
       </span>
       {}
     </Container>
