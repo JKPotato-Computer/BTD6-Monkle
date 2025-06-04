@@ -1,4 +1,4 @@
-button[type="button"],
+button[type="button"]:not(.upgradeBtn),
 .buttonAppearance {
   border-radius: 16px;
   border: 6px solid white;
@@ -12,26 +12,27 @@ button[type="button"],
   transition: 0.1s ease-in-out scale;
 }
 
-button[type="button"]:has(.text.material-symbols-sharp),
+button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp),
 .buttonAppearance:has(.text.material-symbols-sharp) {
   -webkit-text-stroke: 0;
   text-shadow: 0 0 1vh white, 0 0 0.1vh black;
 }
 
-button[type="button"] > .text:not(.material-symbols-sharp),
+button[type="button"]:not(.upgradeBtn) > .text:not(.material-symbols-sharp),
 .buttonAppearance > .text:not(.material-symbols-sharp) {
   font-family: "Luckiest Guy";
   font-weight: 400;
 }
 
-button[type="button"]:hover {
+button[type="button"]:not(.upgradeBtn):hover {
   scale: 1.1;
 }
 
-button[type="button"] .buttonTriangleShine,
+button[type="button"]:not(.upgradeBtn) .buttonTriangleShine,
 .buttonAppearance .buttonTriangleShine {
   position: absolute;
   left: 3px;
+  top: 3px;
   border-top-left-radius: 8px;
   aspect-ratio: 1 / 1;
   height: 70%;
@@ -52,25 +53,24 @@ button[type="button"] .buttonTriangleShine,
   background: white;
 }
 
-button[type="button"]:has(.text.material-symbols-sharp),
+button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp),
 .buttonAppearance:has(.text.material-symbols-sharp) {
   aspect-ratio: 1 / 1;
 }
 
-button[type="button"]:has(.text.material-symbols-sharp) .buttonTriangleShine,
+button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp) .buttonTriangleShine,
 .buttonAppearance:has(.text.material-symbols-sharp) .buttonTriangleShine {
   height: 45%;
   border-top-left-radius: 10px;
 }
 
-button[type="button"] > div.text.material-symbols-sharp,
+button[type="button"]:not(.upgradeBtn) > div.text.material-symbols-sharp,
 .buttonAppearance > div.text.material-symbols-sharp {
   scale: 1.5;
-  line-height: 0;
   position: relative;
 }
 
-button[type="button"] .buttonForeground,
+button[type="button"]:not(.upgradeBtn) .buttonForeground,
 .buttonAppearance .buttonForeground {
   position: absolute;
   width: 100%;
@@ -83,7 +83,7 @@ button[type="button"] .buttonForeground,
   z-index: 2;
 }
 
-button[type="button"].green,
+button[type="button"]:not(.upgradeBtn).green,
 .buttonAppearance.green {
   background: linear-gradient(
     180deg,
@@ -92,12 +92,12 @@ button[type="button"].green,
   );
 }
 
-button[type="button"].green .buttonForeground,
+button[type="button"]:not(.upgradeBtn).green .buttonForeground,
 .buttonAppearance.green .buttonForeground {
   border-color: #209701;
 }
 
-button[type="button"].blue,
+button[type="button"]:not(.upgradeBtn).blue,
 .buttonAppearance.blue {
   background: linear-gradient(
     180deg,
@@ -106,12 +106,12 @@ button[type="button"].blue,
   );
 }
 
-button[type="button"].blue .buttonForeground,
+button[type="button"]:not(.upgradeBtn).blue .buttonForeground,
 .buttonAppearance.blue .buttonForeground {
   border-color: #007dd1;
 }
 
-button[type="button"].yellow,
+button[type="button"]:not(.upgradeBtn).yellow,
 .buttonAppearance.yellow {
   background: linear-gradient(
     180deg,
@@ -120,12 +120,12 @@ button[type="button"].yellow,
   );
 }
 
-button[type="button"].yellow .buttonForeground,
+button[type="button"]:not(.upgradeBtn).yellow .buttonForeground,
 .buttonAppearance.yellow .buttonForeground {
   border-color: #f48c0f;
 }
 
-button[type="button"].red,
+button[type="button"]:not(.upgradeBtn).red,
 .buttonAppearance.red {
   background: linear-gradient(
     180deg,
@@ -134,12 +134,12 @@ button[type="button"].red,
   );
 }
 
-button[type="button"].red .buttonForeground,
+button[type="button"]:not(.upgradeBtn).red .buttonForeground,
 .buttonAppearance.red .buttonForeground {
   border-color: #a01c06;
 }
 
-button[type="button"].green:hover {
+button[type="button"]:not(.upgradeBtn).green:hover {
   background: linear-gradient(
     180deg,
     rgba(90, 185, 0, 1) 0%,
@@ -147,11 +147,11 @@ button[type="button"].green:hover {
   );
 }
 
-button[type="button"].green:hover .buttonForeground {
+button[type="button"]:not(.upgradeBtn).green:hover .buttonForeground {
   border-color: #176b01; /* darker border */
 }
 
-button[type="button"].yellow:hover {
+button[type="button"]:not(.upgradeBtn).yellow:hover {
   background: linear-gradient(
     180deg,
     rgba(204, 178, 0, 1) 0%,
@@ -159,11 +159,11 @@ button[type="button"].yellow:hover {
   );
 }
 
-button[type="button"].yellow:hover .buttonForeground {
+button[type="button"]:not(.upgradeBtn).yellow:hover .buttonForeground {
   border-color: #b36a00; /* darker border */
 }
 
-button[type="button"].red:hover {
+button[type="button"]:not(.upgradeBtn).red:hover {
   background: linear-gradient(
     180deg,
     rgba(200, 90, 0, 1) 0%,
@@ -171,6 +171,6 @@ button[type="button"].red:hover {
   );
 }
 
-button[type="button"].red:hover .buttonForeground {
+button[type="button"]:not(.upgradeBtn).red:hover .buttonForeground {
   border-color: #701203; /* darker border */
 }

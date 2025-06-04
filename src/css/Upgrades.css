@@ -1,13 +1,79 @@
 #selectMonkeyUpgrades {
   position: relative;
-  height: 300px;
+  height: 500px;
   aspect-ratio: 2 / 1;
-  background: var(--purpleBackground);
+  background: var(--blueBackground);
 }
 
-.rotatingQuincy {
+.imageHolder {
+  background: linear-gradient(to bottom, #8ccbec 0%, #6ebde9 100%);
+  border-radius: 16px;
+  border: 2px solid #061f59;
+  position: relative;
+}
+
+.imageHolder > img {
+  position: relative;
+  z-index: 2;
+}
+
+.caption {
   position: absolute;
-  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Luckiest Guy';
+  font-weight: 400;
+  font-size: 24px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  line-height: 20px;
+  z-index: 3;
+}
+
+#selectedUpgradeName {
+  /* Have selectedUpgradeName start from the bottom and grow top */
+  bottom: 92.5%;
+}
+
+.bottomGrad {
+  clip-path: polygon(50% 75%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+  background-color: #36aeeb;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.rectangleGrad {
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  inset: 2.5%;
+  border: 4px solid #5fbeeb;
+  border-radius: 16px;
+}
+
+.crosspath {
+  width: 100%;
+  position: relative;
+}
+
+.upgradeIcon, .upgrades {
+  height: 100%;
+}
+
+.crossPathLine {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: rgb(255,255,255,.3);
   top: 50%;
-  transform: translate(-50%, 25%);
+}
+
+@media (max-width: 1000px) {
+ #selectMonkeyUpgrades {
+  aspect-ratio: 1.5 / 2;
+ }
 }

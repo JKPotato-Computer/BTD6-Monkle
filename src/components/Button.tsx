@@ -5,16 +5,26 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   color: "green" | "blue" | "red" | "yellow";
   type?: "icon";
+  padding?: string;
   onClick?: () => void;
 }
 
-function Button({ children, color, type, onClick, ...rest }: ButtonProps) {
+function Button({
+  children,
+  color,
+  type,
+  onClick,
+  padding,
+  ...rest
+}: ButtonProps) {
   return (
     <button
       type="button"
       className={
         "button " +
-        ((type && (type == "icon" ? "p-3 " : "px-4 py-2 ")) || "px-4 py-2 ") +
+        ((padding && padding + " ") ||
+          (type && (type == "icon" ? "p-3 " : "px-4 py-2 ")) ||
+          "px-4 py-2 ") +
         color +
         " " +
         type

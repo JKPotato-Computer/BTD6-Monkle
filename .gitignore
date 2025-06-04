@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-.codesandbox
-.devcontainer
+.codesandbox/*
+.devcontainer/*
 
 # Editor directories and files
 .vscode/*

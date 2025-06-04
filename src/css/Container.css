@@ -91,3 +91,24 @@
 .guess {
   outline: none;
 }
+
+.guessHolder > div > div:has(.checkGuess) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.guessHolder > div > div > .checkGuess {
+  height: 100%;
+}
+
+.checkGuess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#guessesMade {
+  height: 100%;
+}

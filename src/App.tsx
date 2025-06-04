@@ -4,6 +4,7 @@ import Currency from "./components/Currency";
 import Container from "./components/Container";
 import { useEffect, useState } from "react";
 import Upgrades from "./components/Upgrades";
+import Guess from "./components/Guess";
 
 function App() {
   const [contextMenuVisible, setContextMenuVisible] = useState(false);
@@ -74,54 +75,25 @@ function App() {
       </nav>
       <div id="mainGame" className="d-flex flex-column gap-3">
         <Upgrades />
-        <Container color="brown" className="d-flex gap-3 p-3">
-          <Container color="blue">
-            <span className="fs-1">Guess 0/1</span>
+        <Container
+          color="brown"
+          className="d-flex align-items-center gap-3 p-3"
+        >
+          <Container color="blue" id="guessesMade">
+            <span className="fs-4">Guess 0/10</span>
           </Container>
-          <Button color="red">Clear</Button>
-          <Button color="green">Guess!</Button>
+          <Button color="red" id="clearBtn">
+            Clear
+          </Button>
+          <Button color="green" id="guessBtn">
+            Guess!
+          </Button>
         </Container>
         <div
           id="guesses"
           className="d-flex flex-column gap-2 align-items-center"
         >
-          <Container color="brown">
-            <div className="m-1 fs-3">Guess #1: 2/5</div>
-            <div className="d-flex flex-column gap-2 align-items-center">
-              <Container
-                color=""
-                className="guess buttonAppearance green px-4 py-2 text-center"
-              >
-                <div className="buttonForeground"></div>
-                <div className="buttonTriangleShine"></div>
-                <span>Category: Primary</span>
-              </Container>
-              <Container
-                color=""
-                className="guess buttonAppearance green px-4 py-2 text-center"
-              >
-                <span>Damage: 60</span>
-              </Container>
-              <Container
-                color=""
-                className="guess buttonAppearance yellow px-4 py-2 text-center"
-              >
-                <span>Pierce: 30</span>
-              </Container>
-              <Container
-                color=""
-                className="guess buttonAppearance red px-4 py-2 text-center"
-              >
-                <span>Attack Speed: 15</span>
-              </Container>
-              <Container
-                color=""
-                className="guess buttonAppearance red px-4 py-2 text-center"
-              >
-                <span>Range: 50</span>
-              </Container>
-            </div>
-          </Container>
+          <Guess />
         </div>
       </div>
     </>
