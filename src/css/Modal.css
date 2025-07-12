@@ -1,0 +1,26 @@
+.modal {
+    background-color: rgb(0, 0, 0, .3);
+}
+
+.modal-header {
+    position: absolute;
+    width: 50% !important;
+    height: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: white;
+    font-family: "Luckiest Guy";
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}

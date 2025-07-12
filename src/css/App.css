@@ -56,18 +56,33 @@ html {
 
 body {
   background: black !important;
-  position: absolute;
   width: 100%;
-  min-height: 100%;
-  height: max-content;
-  padding: 3vh;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  padding: 3vh 2vw;
 }
 
 #root {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 nav.navbar {
   z-index: 3;
+}
+
+#mainGame {
+  padding: 1rem
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1vh 1vw;
+  }
+  .fs-3 {
+    font-size: 1.2rem;
+  }
+  /* Add more responsive rules as needed for your components */
 }

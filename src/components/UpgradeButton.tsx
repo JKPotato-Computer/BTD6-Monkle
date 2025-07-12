@@ -1,28 +1,31 @@
+import { HTMLAttributes } from "react";
 import "../css/UpgradeButton.css";
 
-interface UpgradeButtonProps {
-  upgradeNum: number;
+interface UpgradeButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  upgradeCrossPath: string;
   caption: string;
   selected?: boolean;
   eliminated?: boolean;
 }
 
 function UpgradeButton({
-  upgradeNum,
+  upgradeCrossPath,
   caption,
   selected,
   eliminated,
+  ...rest
 }: UpgradeButtonProps) {
   return (
     <button
       type="button"
       className={"upgradeBtn " + (selected ? "selected" : "")}
       disabled={eliminated}
+      {...rest}
     >
       {eliminated && (
         <div className="eliminated material-symbols-sharp">close</div>
       )}
-      <span className="upgradeNum">{upgradeNum}</span>
+      <img className="upgradeNum" src={upgradeCrossPath} />
       <span className="caption">{caption}</span>
     </button>
   );

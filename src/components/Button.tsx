@@ -6,6 +6,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   color: "green" | "blue" | "red" | "yellow";
   type?: "icon";
   padding?: string;
+  disabled?: boolean;
   onClick?: () => void;
 }
 
@@ -15,11 +16,13 @@ function Button({
   type,
   onClick,
   padding,
+  disabled,
   ...rest
 }: ButtonProps) {
   return (
     <button
       type="button"
+      disabled={disabled}
       className={
         "button " +
         ((padding && padding + " ") ||

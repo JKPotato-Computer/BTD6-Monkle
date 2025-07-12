@@ -2,8 +2,11 @@
   background-color: white;
   border: 4px outset;
   outline: 2px solid;
-  width: max-content !important;
   border-radius: 8px;
+}
+
+.container:not(.guessHolder, .guess) {
+  width: max-content;
 }
 
 .container.brown {
@@ -58,10 +61,81 @@
   display: none;
 }
 
+
+.guess > span {
+  font-weight: 400;
+  font-family: "Luckiest Guy";
+  position: relative;
+}
+
+.guess {
+  outline: none;
+  width: 100%;
+}
+
+.guessHolder {
+  width: 100%;
+  height: max-content;
+}
+
+.guessHolder > div > div:has(.checkGuess) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.guessHolder > div > div > .checkGuess {
+  height: 100%;
+}
+
+.checkGuess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 30% !important;
+  flex-grow: 1;
+  margin: 0 !important;
+  height: 10rem !important;
+}
+
+.checkGuess > .buttonTriangleShine {
+  height: 30%;
+}
+
+#guessesMade {
+  height: 100%;
+}
+
+.hints {
+  width: 100%;
+}
+
+.checkGuess > .form-check-input {
+  opacity: 1 !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.checkGuess > .form-check-input:checked {
+  background-color: rgb(0,200,0);
+   background-image: url(../assets/CheckboxCheck.svg);
+}
+
+.checkGuess > .form-check-input:not(:checked) {
+  background-color: rgb(200,0,0);
+  background-image: url(../assets/CheckboxX.svg);
+}
+
 @media (max-width: 600px) {
   #titleContainer > span,
   #titleContainer > span * {
     display: none;
+  }
+
+  .guessControl {
+    width: 100% !important;
   }
 }
 
@@ -80,39 +154,9 @@
   #expandMenu {
     display: block;
   }
-}
 
-.guess > span {
-  font-weight: 400;
-  font-family: "Luckiest Guy";
-  position: relative;
-}
-
-.guess {
-  outline: none;
-}
-
-.guessHolder > div > div:has(.checkGuess) {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.guessHolder > div > div > .checkGuess {
-  height: 100%;
-}
-
-.checkGuess {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.checkGuess > .buttonTriangleShine {
-  height: 30%;
-}
-
-#guessesMade {
-  height: 100%;
+  .checkGuess {
+    width: 100% !important;
+    margin: initial !important;
+  }
 }

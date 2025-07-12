@@ -1,437 +1,613 @@
 {
-    "DartMonkey": {
-      "category": "primary",
-      "name": "Dart Monkey",
-      "img": "src/assets/DartMonkey.webp",
-      "0-0-0": {
-        "damage": 1,
-        "pierce": 2,
-        "attackSpeed": 0.95,
-        "range": 32,
-        "attackType": [
-          "sharp"
-        ]
-      },
-      "1-0-0": {
-        "pierce": 3,
-        "upgradeName": "Sharp Shots"
-      },
-      "2-0-0": {
-        "pierce": 5,
-        "upgradeName": "Razor Sharp Shots"
-      },
-      "3-0-0": {
-        "attackSpeed": 1.15,
-        "range": 36.8,
-        "damage": 2,
-        "pierce": 18,
-        "upgradeName": "Spike-O-Pult"
-      },
-      "4-0-0": {
-        "attackSpeed": 1,
-        "pierce": 60,
-        "damage": 2,
-        "hasBloonEffect": true,
-        "upgradeName": "Juggernaut"
-      },
-      "5-0-0": {
-        "damage": 5,
-        "pierce": 210,
-        "hasBloonEffect": true,
-        "upgradeName": "Ultra-Juggernaut"
-      },
-      "0-1-0": {
-        "attackSpeed": 0.8075,
-        "upgradeName": "Quick Shots"
-      },
-      "0-2-0": {
-        "attackSpeed": 0.6365,
-        "upgradeName": "Very Quick Shots"
-      },
-      "0-3-0": {
-        "damage": 3,
-        "pierce": 6,
-        "upgradeName": "Triple Shot"
-      },
-      "0-4-0": {
-        "attackSpeed": 0.475,
-        "upgradeName": "Super Monkey Fan Club",
-        "hasAbility": true,
-        "hasTowerEffect": true
-      },
-      "0-5-0": {
-        "upgradeName": "Plasma Monkey Fan Club",
-        "hasAbility": true,
-        "hasTowerEffect": true
-      },
-      "0-0-1": {
-        "range": 40,
-        "upgradeName": "Long Range Darts"
-      },
-      "0-0-2": {
-        "range": 48,
-        "upgradeName": "Enhanced Eyesight"
-      },
-      "0-0-3": {
-        "range": 60,
-        "pierce": 3,
-        "damage": 3,
-        "upgradeName": "Crossbow"
-      },
-      "0-0-4": {
-        "damage": 6,
-        "attackSpeed": 0.475,
-        "hasBloonEffect": true,
-        "upgradeName": "Sharp Shooter"
-      },
-      "0-0-5": {
-        "damage": 8,
-        "attackSpeed": 0.2375,
-        "pierce": 8,
-        "range": 80,
-        "hasBloonEffect": true,
-        "upgradeName": "Crossbow Master"
-      },
-      "1-1-0": {
-        "pierce": 3,
-        "attackSpeed": 0.8075
-      },
-      "1-2-0": {
-        "pierce": 3,
-        "attackSpeed": 0.6365
-      },
-      "2-1-0": {
-        "pierce": 5,
-        "attackSpeed": 0.8075
-      },
-      "2-2-0": {
-        "pierce": 5,
-        "attackSpeed": 0.6365
-      },
-      "3-1-0": {
-        "attackSpeed": 0.977,
-        "range": 36.8
-      },
-      "3-2-0": {
-        "attackSpeed": 0.752,
-        "range": 36.8
-      },
-      "4-1-0": {
-        "attackSpeed": 0.85
-      },
-      "4-2-0": {
-        "attackSpeed": 0.68
-      },
-      "5-1-0": {
-        "attackSpeed": 0.8075
-      },
-      "5-2-0": {
-        "attackSpeed": 0.6365
-      },
-      "1-0-1": {
-        "pierce": 3,
-        "range": 40
-      },
-      "1-0-2": {
-        "pierce": 3,
-        "range": 48
-      },
-      "2-0-1": {
-        "pierce": 5,
-        "range": 40
-      },
-      "2-0-2": {
-        "pierce": 5,
-        "range": 48
-      },
-      "3-0-1": {
-        "range": 44.8
-      },
-      "3-0-2": {
-        "range": 52.8
-      },
-      "4-0-1": {
-        "range": 52.8
-      },
-      "4-0-2": {
-        "range": 60.8
-      },
-      "5-0-1": {
-        "range": 88
-      },
-      "5-0-2": {
-        "range": 96
-      },
-      "0-1-1": {
-        "attackSpeed": 0.8075,
-        "range": 40
-      },
-      "0-1-2": {
-        "attackSpeed": 0.8075,
-        "range": 48
-      },
-      "0-2-1": {
-        "attackSpeed": 0.6365,
-        "range": 40
-      },
-      "0-2-2": {
-        "attackSpeed": 0.6365,
-        "range": 48
-      },
-      "0-3-1": {
-        "range": 60,
-        "damage": 3,
-        "pierce": 6
-      },
-      "0-3-2": {
-        "range": 60,
-        "damage": 3,
-        "pierce": 6
-      },
-      "0-4-1": {
-        "attackSpeed": 0.475,
-        "range": 60
-      },
-      "0-4-2": {
-        "attackSpeed": 0.475,
-        "range": 60
-      },
-      "0-5-1": {
-        "range": 80
-      },
-      "0-5-2": {
-        "range": 80
-      }
+  "DartMonkey": {
+    "category": "Primary",
+    "name": "Dart Monkey",
+    "img": "DartMonkey.webp",
+    "0-0-0": {
+      "damage": 1,
+      "pierce": 2,
+      "attackSpeed": 0.95,
+      "range": 32,
+      "attackType": ["sharp"]
     },
-    "BoomerangMonkey": {
-      "category": "primary",
-      "name": "Boomerang Monkey",
-      "img": "src/assets/BoomerangMonkey.png",
-      "0-0-0": {
-        "damage": 1,
-        "pierce": 3,
-        "attackSpeed": 1,
-        "range": 40,
-        "attackType": [
-          "sharp"
-        ]
-      },
-      "1-0-0": {
-        "pierce": 8,
-        "upgradeName": "Improved Rangs"
-      },
-      "2-0-0": {
-        "pierce": 13,
-        "upgradeName": "Glaives"
-      },
-      "3-0-0": {
-        "pierce": 30,
-        "upgradeName": "Glaive Ricochet"
-      },
-      "4-0-0": {
-        "pierce": 80,
-        "attackSpeed": 0.333,
-        "upgradeName": "M.O.A.R Glaves"
-      },
-      "5-0-0": {
-        "damage": 6,
-        "pierce": 100,
-        "attackSpeed": 0.4,
-        "hasBloonEffect": true,
-        "upgradeName": "Glaive Lord"
-      },
-      "0-1-0": {
-        "attackSpeed": 0.75,
-        "upgradeName": "Faster Throwing"
-      },
-      "0-2-0": {
-        "attackSpeed": 0.675,
-        "upgradeName": "Faster Rangs"
-      },
-      "0-3-0": {
-        "attackSpeed": 0.238,
-        "upgradeName": "Bionic Boomerang"
-      },
-      "0-4-0": {
-        "hasAbility": true,
-        "upgradeName": "Turbo Charge"
-      },
-      "0-5-0": {
-        "damage": 4,
-        "attackSpeed": 0.034,
-        "hasAbility": true,
-        "upgradeName": "Perma Charge"
-      },
-      "0-0-1": {
-        "range": 54.19,
-        "upgradeName": "Long Range Rangs"
-      },
-      "0-0-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true,
-        "upgradeName": "Red Hot Rangs"
-      },
-      "0-0-3": {
-        "pierce": 18,
-        "hasBloonEffect": true,
-        "upgradeName": "Kylie Boomerang"
-      },
-      "0-0-4": {
-        "pierce": 200,
-        "hasBloonEffect": true,
-        "upgradeName": "MOAR Press"
-      },
-      "0-0-5": {
-        "damage": 10,
-        "pierce": 236,
-        "attackSpeed": 0.5,
-        "hasBloonEffect": true,
-        "upgradeName": "MOAB Domination"
-      },
-      "1-1-0": {
-        "pierce": 8,
-        "attackSpeed": 0.75
-      },
-      "1-2-0": {
-        "pierce": 8,
-        "attackSpeed": 0.675
-      },
-      "2-1-0": {
-        "pierce": 13,
-        "attackSpeed": 0.75
-      },
-      "2-2-0": {
-        "pierce": 13,
-        "attackSpeed": 0.675
-      },
-      "3-1-0": {
-        "attackSpeed": 0.238
-      },
-      "3-2-0": {
-        "attackSpeed": 0.214
-      },
-      "4-1-0": {
-        "attackSpeed": 0.25
-      },
-      "4-2-0": {
-        "attackSpeed": 0.225
-      },
-      "5-1-0": {
-        "attackSpeed": 0.32
-      },
-      "5-2-0": {
-        "attackSpeed": 0.28
-      },
-      "1-0-1": {
-        "pierce": 8,
-        "range": 54.19
-      },
-      "1-0-2": {
-        "pierce": 8,
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "2-0-1": {
-        "pierce": 13,
-        "range": 54.19
-      },
-      "2-0-2": {
-        "pierce": 13,
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "3-0-1": {
-        "range": 54.19
-      },
-      "3-0-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "4-0-1": {
-        "range": 54.19
-      },
-      "4-0-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "5-0-1": {
-        "range": 54.19
-      },
-      "5-0-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "0-1-1": {
-        "attackSpeed": 0.75,
-        "range": 54.19
-      },
-      "0-1-2": {
-        "attackSpeed": 0.75,
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "0-2-1": {
-        "attackSpeed": 0.675,
-        "range": 54.19
-      },
-      "0-2-2": {
-        "attackSpeed": 0.675,
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "0-3-1": {
-        "range": 54.19
-      },
-      "0-3-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "0-4-1": {
-        "range": 54.19
-      },
-      "0-4-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      },
-      "0-5-1": {
-        "range": 54.19
-      },
-      "0-5-2": {
-        "attackType": [
-          "sharp",
-          "fire"
-        ],
-        "hasBloonEffect": true
-      }
+    "1-0-0": {
+      "pierce": 3,
+      "img": "1xx.png",
+      "name": "Sharp Shots"
+    },
+    "2-0-0": {
+      "pierce": 5,
+      "img": "2xx.png",
+      "name": "Razor Sharp Shots"
+    },
+    "3-0-0": {
+      "attackSpeed": 1.15,
+      "range": 36.8,
+      "damage": 2,
+      "pierce": 18,
+      "img": "3xx.png",
+      "name": "Spike-O-Pult"
+    },
+    "4-0-0": {
+      "attackSpeed": 1,
+      "pierce": 60,
+      "damage": 2,
+      "img": "4xx.png",
+      "name": "Juggernaut"
+    },
+    "5-0-0": {
+      "damage": 5,
+      "pierce": 210,
+      "img": "5xx.png",
+      "name": "Ultra-Juggernaut"
+    },
+    "0-1-0": {
+      "attackSpeed": 0.8075,
+      "img": "x1x.png",
+      "name": "Quick Shots"
+    },
+    "0-2-0": {
+      "attackSpeed": 0.6365,
+      "img": "x2x.png",
+      "name": "Very Quick Shots"
+    },
+    "0-3-0": {
+      "damage": 1,
+      "pierce": 2,
+      "attackSpeed": 0.4748,
+      "img": "x3x.png",
+      "name": "Triple Shot"
+    },
+    "0-4-0": {
+      "attackSpeed": 0.24,
+      "hasAbility": true,
+      "img": "x4x.png",
+      "name": "Super Monkey Fan Club"
+    },
+    "0-5-0": {
+      "hasAbility": true,
+      "img": "x5x.png",
+      "name": "Plasma Monkey Fan Club"
+    },
+    "0-0-1": {
+      "range": 40,
+      "img": "xx1.png",
+      "name": "Long Range Darts"
+    },
+    "0-0-2": {
+      "range": 48,
+      "img": "xx2.png",
+      "name": "Enhanced Eyesight",
+      "canSeeCamo": true
+    },
+    "0-0-3": {
+      "range": 60,
+      "pierce": 3,
+      "damage": 3,
+      "img": "xx3.png",
+      "name": "Crossbow"
+    },
+    "0-0-4": {
+      "damage": 6,
+      "attackSpeed": 0.475,
+      "img": "xx4.png",
+      "name": "Sharp Shooter"
+    },
+    "0-0-5": {
+      "damage": 8,
+      "attackSpeed": 0.2375,
+      "pierce": 8,
+      "range": 80,
+      "img": "xx5.png",
+      "name": "Crossbow Master"
+    },
+    "3-1-0": {
+      "attackSpeed": 0.8075,
+      "range": 36.8,
+      "damage": 2,
+      "pierce": 18
+    },
+    "3-2-0": {
+      "attackSpeed": 0.7667,
+      "range": 36.8,
+      "damage": 2,
+      "pierce": 18
+    },
+    "3-0-1": {
+      "attackSpeed": 1.15,
+      "range": 40,
+      "damage": 2,
+      "pierce": 18
+    },
+    "3-0-2": {
+      "attackSpeed": 1.15,
+      "range": 48,
+      "damage": 2,
+      "pierce": 18
+    },
+    "4-1-0": {
+      "attackSpeed": 0.8075,
+      "pierce": 60,
+      "damage": 2
+    },
+    "4-2-0": {
+      "attackSpeed": 0.6365,
+      "pierce": 60,
+      "damage": 2
+    },
+    "4-0-1": {
+      "attackSpeed": 1,
+      "pierce": 60,
+      "damage": 2,
+      "range": 40
+    },
+    "4-0-2": {
+      "attackSpeed": 1,
+      "pierce": 60,
+      "damage": 2,
+      "range": 48
+    },
+    "5-1-0": {
+      "attackSpeed": 0.8075,
+      "damage": 5,
+      "pierce": 210
+    },
+    "5-2-0": {
+      "attackSpeed": 0.6365,
+      "damage": 5,
+      "pierce": 210
+    },
+    "5-0-1": {
+      "damage": 5,
+      "pierce": 210,
+      "range": 40
+    },
+    "5-0-2": {
+      "damage": 5,
+      "pierce": 210,
+      "range": 48
+    },
+    "1-3-0": {
+      "attackSpeed": 0.95,
+      "damage": 3,
+      "pierce": 6
+    },
+    "2-3-0": {
+      "attackSpeed": 0.95,
+      "damage": 3,
+      "pierce": 6
+    },
+    "0-3-1": {
+      "attackSpeed": 0.95,
+      "damage": 3,
+      "pierce": 6,
+      "range": 40
+    },
+    "0-3-2": {
+      "attackSpeed": 0.95,
+      "damage": 3,
+      "pierce": 6,
+      "range": 48
+    },
+    "1-4-0": {
+      "attackSpeed": 0.475,
+      "hasAbility": true
+    },
+    "2-4-0": {
+      "attackSpeed": 0.475,
+      "hasAbility": true
+    },
+    "0-4-1": {
+      "attackSpeed": 0.475,
+      "hasAbility": true,
+      "range": 40
+    },
+    "0-4-2": {
+      "attackSpeed": 0.475,
+      "hasAbility": true,
+      "range": 48
+    },
+    "1-5-0": {
+      "hasAbility": true
+    },
+    "2-5-0": {
+      "hasAbility": true
+    },
+    "0-5-1": {
+      "hasAbility": true,
+      "range": 40
+    },
+    "0-5-2": {
+      "hasAbility": true,
+      "range": 48
+    },
+    "1-0-3": {
+      "range": 60,
+      "pierce": 3,
+      "damage": 3
+    },
+    "2-0-3": {
+      "range": 60,
+      "pierce": 5,
+      "damage": 3
+    },
+    "0-1-3": {
+      "range": 60,
+      "pierce": 3,
+      "damage": 3,
+      "attackSpeed": 0.8075
+    },
+    "0-2-3": {
+      "range": 60,
+      "pierce": 3,
+      "damage": 3,
+      "attackSpeed": 0.6365
+    },
+    "1-0-4": {
+      "damage": 6,
+      "attackSpeed": 0.475
+    },
+    "2-0-4": {
+      "damage": 6,
+      "attackSpeed": 0.475
+    },
+    "0-1-4": {
+      "damage": 6,
+      "attackSpeed": 0.475
+    },
+    "0-2-4": {
+      "damage": 6,
+      "attackSpeed": 0.475
+    },
+    "1-0-5": {
+      "damage": 8,
+      "attackSpeed": 0.2375,
+      "pierce": 17,
+      "range": 80
+    },
+    "2-0-5": {
+      "damage": 8,
+      "attackSpeed": 0.2375,
+      "pierce": 25,
+      "range": 80
+    },
+    "0-1-5": {
+      "damage": 8,
+      "attackSpeed": 0.2375,
+      "pierce": 9,
+      "range": 80
+    },
+    "0-2-5": {
+      "damage": 8,
+      "attackSpeed": 0.2375,
+      "pierce": 9,
+      "range": 80
+    },
+    "0-1-1": {
+      "attackSpeed": 0.8075,
+      "range": 40
+    },
+    "0-1-2": {
+      "attackSpeed": 0.8075,
+      "range": 48
+    },
+    "0-2-1": {
+      "attackSpeed": 0.6365,
+      "range": 40
+    },
+    "0-2-2": {
+      "attackSpeed": 0.6365,
+      "range": 48
+    },
+    "1-1-0": {
+      "pierce": 3,
+      "attackSpeed": 0.8075
+    },
+    "1-2-0": {
+      "pierce": 3,
+      "attackSpeed": 0.6365
+    },
+    "2-1-0": {
+      "pierce": 5,
+      "attackSpeed": 0.8075
+    },
+    "2-2-0": {
+      "pierce": 5,
+      "attackSpeed": 0.6365
+    },
+    "1-0-1": {
+      "pierce": 3,
+      "range": 40
+    },
+    "1-0-2": {
+      "pierce": 3,
+      "range": 48
+    },
+    "2-0-1": {
+      "pierce": 5,
+      "range": 40
+    },
+    "2-0-2": {
+      "pierce": 5,
+      "range": 48
+    }
+  },
+  "Druid": {
+    "category": "Magic",
+    "name": "Druid",
+    "img": "DruidMonkey.png",
+    "0-0-0": {
+      "damage": 1,
+      "pierce": 1,
+      "attackSpeed": 1.1,
+      "range": 35,
+      "attackType": ["sharp"]
+    },
+    "1-0-0": {
+      "pierce": 2,
+      "attackType": ["normal"],
+      "img": "1xx.png",
+      "name": "Hard Thorns"
+    },
+    "2-0-0": {
+      "pierce": [2, 31],
+      "damage": [1, 2],
+      "attackType": ["normal", "plasma"],
+      "img": "2xx.png",
+      "name": "Heart of Thunder",
+      "keywords": ["bloonDebuff"]
+    },
+    "3-0-0": {
+      "img": "3xx.png",
+      "name": "Druid of the Storm",
+      "keywords": ["bloonDebuff", "terrainEffect"]
+    },
+    "4-0-0": {
+      "damage": [1, 3],
+      "img": "4xx.png",
+      "name": "Ball Lightning",
+      "keywords": ["bloonDebuff", "terrainEffect"]
+    },
+    "5-0-0": {
+      "damage": [1, 10, 120],
+      "pierce": [2, 31, 200],
+      "img": "4xx.png",
+      "name": "Superstorm",
+      "keywords": ["bloonDebuff", "terrainEffect", "scaling"]
+    },
+    "0-1-0": {
+      "img": "x1x.png",
+      "name": "Thorn Swarm"
+    },
+    "0-2-0": {
+      "img": "x2x.png",
+      "name": "Heart of Oak",
+      "keywords": ["statusClear", "scaling"]
+    },
+    "0-3-0": {
+      "img": "x3x.png",
+      "name": "Druid of the Jungle",
+      "keywords": ["entangle", "bloonDebuff"]
+    },
+    "0-4-0": {
+      "img": "x4x.png",
+      "name": "Jungle's Bounty",
+      "hasAbility": true,
+      "range": 45,
+      "keywords": ["moneyOnUse"]
+    },
+    "0-5-0": {
+      "img": "x5x.png",
+      "name": "Spirit of the Forest",
+      "keywords": ["terrainEffect", "scaling"],
+      "canSeeCamo": true
+    },
+    "0-0-1": {
+      "img": "xx1.png",
+      "name": "Druidic Reach",
+      "range": 45
+    },
+    "0-0-2": {
+      "img": "xx2.png",
+      "name": "Heart of Vengenance",
+      "keywords": ["scaling"]
+    },
+    "0-0-3": {
+      "img": "xx3.png",
+      "name": "Druid of Wrath",
+      "keywords": ["scaling"]
+    },
+    "0-0-4": {
+      "img": "xx4.png",
+      "name": "Poplust",
+      "keywords": ["towerBuff", "synergy", "stackingBuff"]
+    },
+    "0-0-5": {
+      "img": "xx5.png",
+      "name": "Avatar of Wrath",
+      "keywords": ["scaling", "synergy"]
+    },
+    "3-1-0": {},
+    "3-2-0": {},
+    "3-0-1": {
+      "range": 45
+    },
+    "3-0-2": {
+      "range": 45
+    },
+    "4-1-0": {
+      "damage": [1, 3]
+    },
+    "4-2-0": {
+      "damage": [1, 3]
+    },
+    "4-0-1": {
+      "damage": [1, 3],
+      "range": 45
+    },
+    "4-0-2": {
+      "damage": [1, 3],
+      "range": 45
+    },
+    "5-1-0": {
+      "damage": [1, 10, 120],
+      "pierce": [2, 31, 200]
+    },
+    "5-2-0": {
+      "damage": [1, 10, 120],
+      "pierce": [2, 31, 200]
+    },
+    "5-0-1": {
+      "damage": [1, 10, 120],
+      "pierce": [2, 31, 200],
+      "range": 45
+    },
+    "5-0-2": {
+      "damage": [1, 10, 120],
+      "pierce": [2, 31, 200],
+      "range": 45
+    },
+    "1-3-0": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "2-3-0": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "0-3-1": {
+      "range": 45
+    },
+    "0-3-2": {
+      "range": 45
+    },
+    "1-4-0": {
+      "pierce": 2,
+      "range": 45,
+      "attackType": ["normal"],
+      "hasAbility": true
+    },
+    "2-4-0": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "range": 45,
+      "attackType": ["normal", "plasma"],
+      "hasAbility": true
+    },
+    "0-4-1": {
+      "range": 45,
+      "hasAbility": true
+    },
+    "0-4-2": {
+      "range": 45,
+      "hasAbility": true
+    },
+    "1-5-0": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "2-5-0": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "0-5-1": {
+      "range": 45
+    },
+    "0-5-2": {
+      "range": 45
+    },
+    "1-0-3": {
+      "pierce": 2,
+      "range": 45,
+      "attackType": ["normal"]
+    },
+    "2-0-3": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "range": 45,
+      "attackType": ["normal", "plasma"]
+    },
+    "0-1-3": {
+      "range": 45
+    },
+    "0-2-3": {
+      "range": 45
+    },
+    "1-0-4": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "2-0-4": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "0-1-4": {},
+    "0-2-4": {},
+    "1-0-5": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "2-0-5": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "0-1-5": {},
+    "0-2-5": {},
+    "0-1-1": {
+      "range": 45
+    },
+    "0-1-2": {
+      "range": 45
+    },
+    "0-2-1": {
+      "range": 45
+    },
+    "0-2-2": {
+      "range": 45
+    },
+    "1-1-0": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "1-2-0": {
+      "pierce": 2,
+      "attackType": ["normal"]
+    },
+    "2-1-0": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "2-2-0": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "attackType": ["normal", "plasma"]
+    },
+    "1-0-1": {
+      "pierce": 2,
+      "range": 45,
+      "attackType": ["normal"]
+    },
+    "1-0-2": {
+      "pierce": 2,
+      "range": 45,
+      "attackType": ["normal"]
+    },
+    "2-0-1": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "range": 45,
+      "attackType": ["normal", "plasma"]
+    },
+    "2-0-2": {
+      "damage": [1, 2],
+      "pierce": [2, 31],
+      "range": 45,
+      "attackType": ["normal", "plasma"]
     }
   }
+}

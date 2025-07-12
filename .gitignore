@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-.codesandbox/*
-.devcontainer/*
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
