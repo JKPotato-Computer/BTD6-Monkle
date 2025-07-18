@@ -28,6 +28,10 @@
   -webkit-text-stroke: 1px black;
 }
 
+.upgradeBtn:has(.eliminated) {
+  background: radial-gradient(circle, #00b3ffca 0%, #06d6ff71 100%);
+}
+
 .upgradeNum {
   height: 80%;
 }

@@ -4,6 +4,8 @@ import "../css/Container.css";
 interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   color: "brown" | "blue" | "";
   children: ReactNode;
+  className?: string;
+  id?: string;
 }
 
 function Container({

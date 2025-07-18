@@ -12,10 +12,17 @@ button[type="button"]:not(.upgradeBtn),
   transition: 0.1s ease-in-out scale;
 }
 
+button[type="button"]:not(.upgradeBtn):focus {
+  border: 6px solid white;
+  outline: solid;
+}
+
 button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp),
 .buttonAppearance:has(.text.material-symbols-sharp) {
   -webkit-text-stroke: 0;
-  text-shadow: 0 0 1vh white, 0 0 0.1vh black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
+    -1px 1px 0 black, 0.25px 1.25px 0 black, 1.25px 0.25px 0 black,
+    -0.25px -1.25px 0 black, -1.25px -0.25px black;
 }
 
 button[type="button"]:not(.upgradeBtn) > .text:not(.material-symbols-sharp),
@@ -24,7 +31,7 @@ button[type="button"]:not(.upgradeBtn) > .text:not(.material-symbols-sharp),
   font-weight: 400;
 }
 
-button[type="button"]:not(.upgradeBtn):hover {
+button[type="button"]:not(.upgradeBtn, .faqQuestion):hover {
   scale: 1.1;
 }
 
@@ -58,7 +65,8 @@ button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp),
   aspect-ratio: 1 / 1;
 }
 
-button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp) .buttonTriangleShine,
+button[type="button"]:not(.upgradeBtn):has(.text.material-symbols-sharp)
+  .buttonTriangleShine,
 .buttonAppearance:has(.text.material-symbols-sharp) .buttonTriangleShine {
   height: 45%;
   border-top-left-radius: 10px;
@@ -173,4 +181,43 @@ button[type="button"]:not(.upgradeBtn).red:hover {
 
 button[type="button"]:not(.upgradeBtn).red:hover .buttonForeground {
   border-color: #701203; /* darker border */
+}
+
+button a {
+  font-family: "Luckiest Guy";
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #e3e3e3;
+  color: #1c1c1c;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 12px;
+  pointer-events: none;
+  font-weight: 700 !important;
+  font-family: "Source Sans Pro" !important;
+}
+
+.button-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }

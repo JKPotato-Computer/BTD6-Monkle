@@ -24,7 +24,7 @@ html {
 }
 
 .backgroundHexagons {
-  background-image: url("../assets/pattern.svg");
+  background-image: url("../assets/ui/pattern.svg");
   background-repeat: repeat;
   background-size: 30px 60px;
   opacity: 0.2;
@@ -74,7 +74,7 @@ nav.navbar {
 }
 
 #mainGame {
-  padding: 1rem
+  padding: 1rem;
 }
 
 @media (max-width: 600px) {

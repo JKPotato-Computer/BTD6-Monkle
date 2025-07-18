@@ -10,8 +10,6 @@ import {
   UpgradeType,
   getFullCrosspathUpgrade,
   upgradePathsToString,
-  compareCrosspaths,
-  compareCrosspathsDetailed,
   shareClipboard,
 } from "./components/Crosspath.ts";
 
@@ -19,28 +17,40 @@ import { getDailyPuzzle, getPuzzleNumber } from "./components/DailyPuzzle.ts";
 import TimeLeft from "./components/TimeLeft.tsx";
 import upgradesList from "./data/crosspaths.json";
 import Modal from "./components/Modal.tsx";
+import InfoModal from "./components/InfoModal.tsx";
+import StatsModal from "./components/StatsModal.tsx";
 
 function App() {
+  // UI
   const [contextMenuVisible, setContextMenuVisible] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1000); // Initial check
+
+  // Modals
+  const [infoModalVisible, setInfoModalVisible] = useState(false);
+  const [statsModalVisible, setStatsModalVisible] = useState(false);
+
+  // Selected Monkey
   const [currentMonkeySelected, setCurrentMonkeySelected] =
     useState<MonkeyType>("DartMonkey");
   const [currentUpgradesSelected, setCurrentUpgradesSelected] =
     useState<UpgradeType>([0, 0, 0]);
 
+  // Correct Monkey
   const [correctMonkey, setCorrectMonkey] = useState<MonkeyType>();
   const [correctUpgrades, setCorrectUpgrades] = useState<UpgradeType>();
 
+  // Guesses
   const [currentGuesses, setCurrentGuesses] = useState<Record<string, any>[]>(
     []
   );
-
   const [lockGuesses, setLockGuesses] = useState(false);
 
+  // Hints
   const [revealKeywords, setRevealKeywords] = useState(false);
   const [revealCanSeeCamo, setRevealCanSeeCamo] = useState(false);
   const [revealAbility, setRevealAbility] = useState(false);
 
+  // Stats
   const [streakNumber, setStreakNumber] = useState(
     parseInt(localStorage.getItem("streak") || "0")
   );
@@ -64,6 +74,7 @@ function App() {
 
   const currentPuzzleNumber = getPuzzleNumber();
 
+  // Save Data
   useEffect(() => {
     localStorage.setItem("streak", streakNumber.toString());
   }, [streakNumber]);
@@ -83,7 +94,8 @@ function App() {
   }, [timeData]);
 
   useEffect(() => {
-    if (timeData.lastPuzzleNumber < currentPuzzleNumber) {
+    console.log(timeData.lastPuzzleNumber, currentPuzzleNumber);
+    if (timeData.lastPuzzleNumber != currentPuzzleNumber) {
       const newTimeData = {
         ...timeData,
         hasSolved: false,
@@ -97,7 +109,7 @@ function App() {
       }
 
       setLastGuessData([]);
-    } else if (timeData.lastPuzzleNumber === currentPuzzleNumber) {
+    } else if (timeData.lastPuzzleNumber == currentPuzzleNumber) {
       let areEqual = true;
 
       if (currentGuesses.length !== lastGuessData.length) {
@@ -127,7 +139,13 @@ function App() {
         }
       }
 
-      if (!areEqual && lastGuessData.length > currentGuesses.length) {
+      console.log(lastGuessData.length, currentGuesses.length);
+
+      if (
+        !areEqual &&
+        (lastGuessData.length > currentGuesses.length ||
+          lastGuessData.length == 0)
+      ) {
         setCurrentGuesses([...lastGuessData]);
       } else if (!areEqual && lastGuessData.length < currentGuesses.length) {
         setLastGuessData([...currentGuesses]);
@@ -168,7 +186,20 @@ function App() {
   return (
     <>
       <div>
-        <Modal header="Info">Test</Modal>
+        <Modal header="Info" visible={infoModalVisible}>
+          <InfoModal
+            closeEvent={() => {
+              setInfoModalVisible(false);
+            }}
+          />
+        </Modal>
+        <Modal header="Stats" visible={statsModalVisible}>
+          <StatsModal
+            closeEvent={() => {
+              setStatsModalVisible(false);
+            }}
+          />
+        </Modal>
       </div>
       <nav className="navbar navbar-expand-lg justify-content-between gap-4">
         <Container
@@ -204,10 +235,24 @@ function App() {
               "none",
           }}
         >
-          <Button color="blue" type="icon">
+          <Button
+            color="blue"
+            type="icon"
+            tooltip="About"
+            onClick={() => {
+              setInfoModalVisible(true);
+            }}
+          >
             question_mark
           </Button>
-          <Button color="green" type="icon">
+          <Button
+            color="green"
+            type="icon"
+            tooltip="Stats"
+            onClick={() => {
+              setStatsModalVisible(true);
+            }}
+          >
             bar_chart
           </Button>
           <Currency type="Streak" currency={streakNumber} />
@@ -253,10 +298,11 @@ function App() {
                   currentUpgradesSelected
                 );
 
-                let wasCorrect = compareCrosspaths(
-                  crossPathUpgrade,
-                  correctUpgradesList
-                );
+                let wasCorrect =
+                  currentMonkeySelected == correctMonkey &&
+                  currentUpgradesSelected[0] == correctUpgrades[0] &&
+                  currentUpgradesSelected[1] == correctUpgrades[1] &&
+                  currentUpgradesSelected[2] == correctUpgrades[2];
 
                 crossPathUpgrade.monkeyGuessed =
                   upgradePathsToString(currentUpgradesSelected) +

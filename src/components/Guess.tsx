@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import Container from "./Container";
 import GuessPoint from "./GuessPoint";
 import Button from "./Button";
-import { compareCrosspathsDetailed, shareClipboard } from "./Crosspath";
+import { compareCrosspathsDetailed } from "./Crosspath";
 
 interface GuessProps {
   classType: [

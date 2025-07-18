@@ -75,7 +75,8 @@
 }
 
 #selectedMonkey {
-  background: rgb(0, 0, 0, .25) url(../assets/DropdownArrow.svg) no-repeat right;
+  background: rgb(0, 0, 0, 0.25) url(../assets/ui/DropdownArrow.svg) no-repeat
+    right;
   font-family: "Luckiest Guy";
   appearance: none;
   color: white;
@@ -111,7 +112,7 @@ option {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   #selectedMonkey {
     font-size: 1.2rem !important;
   }
@@ -121,3 +122,4 @@ option {
     margin-bottom: 3rem;
   }
 }
+

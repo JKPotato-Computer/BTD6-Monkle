@@ -1,0 +1,95 @@
+.monkeyImage {
+  width: calc(120px * var(--scale));
+  object-fit: scale-down;
+  aspect-ratio: 1 / 1.2;
+  scale: 1.15;
+}
+
+.monkeyImageInner,
+.monkeyImageBorder,
+.monkeyImageOuter,
+.monkeyImageOutermost {
+  width: max-content;
+  position: relative;
+}
+
+.monkeyImageInner {
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 111, 152, 1) 0%,
+    rgba(0, 31, 51, 1) 100%
+  );
+  background-size: 100% 162.5%;
+}
+
+.monkeyImageBorder {
+  padding: calc(3px * var(--scale));
+  background: linear-gradient(to right, #005fa5, #0082cf);
+}
+
+.monkeyImageOuter {
+  overflow: hidden;
+  padding: calc(9px * var(--scale));
+  background: linear-gradient(
+    165deg,
+    rgba(0, 151, 220, 1) 0%,
+    rgba(0, 151, 220, 1) 65%,
+    rgba(0, 93, 188, 1) 65%,
+    rgba(0, 93, 188, 1) 100%
+  );
+}
+.monkeyImageRectangle {
+  width: 200%;
+  height: 20%;
+  left: 12.5%;
+  top: 100%;
+  transform: translate(-50%);
+  rotate: 50deg;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  clip-path: polygon(100% 0, 50% 50%, 0% 0%, 0% 100%, 50% 50%, 100% 100%);
+}
+
+.monkeyImageRectangle2 {
+  width: 200%;
+  height: 20%;
+  left: -112.5%;
+  top: 100%;
+  transform: translate(50%);
+  rotate: -50deg;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  clip-path: polygon(100% 0, 50% 50%, 0% 0%, 0% 100%, 50% 50%, 100% 100%);
+}
+
+.monkeyImageOutermost {
+  padding: calc(3px * var(--scale));
+  background: linear-gradient(180deg, #01ebfc, #0146b3);
+  border: 4px solid #033f57;
+}
+
+.mostChosenMonkey {
+  position: absolute;
+  color: white;
+  font-family: "Luckiest Guy";
+  font-weight: 400;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 0 0 1px black;
+  left: 0;
+  width: 100%;
+  top: 87.5%;
+  padding: calc(0 * var(--scale)) 12.5%;
+  line-height: 1;
+}

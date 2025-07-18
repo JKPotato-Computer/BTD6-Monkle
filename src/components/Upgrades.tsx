@@ -46,24 +46,26 @@ function createCrossPaths(
       isEliminated = true;
     }
 
+    let monkeyKeyType = key as keyof typeof monkey;
+
     return (
       <UpgradeButton
         key={key}
         upgradeCrossPath={
-          typeof monkey[key as keyof typeof monkey] === "object" &&
-          monkey[key as keyof typeof monkey] !== null &&
-          "img" in (monkey[key as keyof typeof monkey] as any)
+          typeof monkey[monkeyKeyType] === "object" &&
+          monkey[monkeyKeyType] !== null &&
+          "img" in (monkey[monkeyKeyType] as any)
             ? "src/assets/monkeys/" +
               currentMonkeySelected +
               "/" +
-              (monkey[key as keyof typeof monkey] as any).img
+              (monkey[monkeyKeyType] as any).img
             : ""
         }
         caption={
-          typeof monkey[key as keyof typeof monkey] === "object" &&
-          monkey[key as keyof typeof monkey] !== null &&
-          "name" in (monkey[key as keyof typeof monkey] as any)
-            ? (monkey[key as keyof typeof monkey] as any).name
+          typeof monkey[monkeyKeyType] === "object" &&
+          monkey[monkeyKeyType] !== null &&
+          "name" in (monkey[monkeyKeyType] as any)
+            ? (monkey[monkeyKeyType] as any).name
             : ""
         }
         selected={isSelected}
@@ -167,6 +169,7 @@ function Upgrades({
             color="green"
             type="icon"
             padding="p-2 me-3"
+            tooltip="Previous"
             onClick={() => {
               let currentIndex = Object.keys(upgradeList).indexOf(
                 currentMonkeySelected
@@ -204,6 +207,7 @@ function Upgrades({
             color="green"
             type="icon"
             padding="p-2 ms-3"
+            tooltip="Next"
             onClick={() => {
               let currentIndex = Object.keys(upgradeList).indexOf(
                 currentMonkeySelected

@@ -1,0 +1,25 @@
+.faqBox {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.faqQuestion {
+  background: none;
+  outline: none !important;
+  border: none !important;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  padding: 0.5rem 0rem;
+  justify-content: space-between;
+}
+
+.accordion-btn-open,
+.accordion-btn-close {
+  height: 1.5rem;
+}
+
+.accordion-btn-open {
+  rotate: 180deg;
+}
