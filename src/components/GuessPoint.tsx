@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import Button from "./Button";
 import Container from "./Container";
 
@@ -39,7 +38,7 @@ function GuessPoint({
     if (Array.isArray(value[0])) {
       number = value[1];
       list = (value[0] as string[])
-        .map((val, ind) => {
+        .map((val) => {
           return " " + val;
         })
         .toString();

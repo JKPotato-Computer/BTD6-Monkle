@@ -4,12 +4,7 @@ import UpgradeButton from "./UpgradeButton";
 import Button from "./Button";
 import upgradeList from "../data/crosspaths.json";
 import { Dispatch, SetStateAction } from "react";
-import {
-  MonkeyType,
-  UpgradeType,
-  upgradePathsToString,
-  getFullCrosspathUpgrade,
-} from "./Crosspath.ts";
+import { MonkeyType, UpgradeType, upgradePathsToString } from "./Crosspath.ts";
 
 type UpgradeProps = {
   currentMonkeySelected: MonkeyType;
