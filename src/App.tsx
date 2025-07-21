@@ -20,6 +20,17 @@ import Modal from "./components/Modal.tsx";
 import InfoModal from "./components/InfoModal.tsx";
 import StatsModal from "./components/StatsModal.tsx";
 
+type AnalyticData = {
+  crosspathsGuessed: Record<string, number>;
+  firstCrosspathGuesses: Record<string, number>;
+  lastHighestStreak: {
+    lostDate: number;
+    streak: number;
+  };
+  totalAttempts: number[];
+  totalPuzzlesPlayed: number;
+};
+
 function App() {
   // UI
   const [contextMenuVisible, setContextMenuVisible] = useState(false);
@@ -72,9 +83,46 @@ function App() {
         };
   });
 
+  const [analyticData, setAnalyticData] = useState<AnalyticData>(() => {
+    const item = localStorage.getItem("analyticData");
+    return item
+      ? JSON.parse(item)
+      : ({
+          crosspathsGuessed: {},
+          firstCrosspathGuesses: {},
+          totalAttempts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          totalPuzzlesPlayed: 0,
+          lastHighestStreak: {
+            streak: 0,
+            lostDate: 0,
+          },
+        } as AnalyticData);
+  });
+
+  // Use localStorage to automatically open the InfoModal if the user has never visited the website before.
+  const [hasVisited, setHasVisited] = useState(
+    localStorage.getItem("hasVisited") === "true" ? true : false
+  );
+
+  if (!infoModalVisible && !hasVisited) {
+    setHasVisited(true);
+    setInfoModalVisible(true);
+  }
+
   const currentPuzzleNumber = getPuzzleNumber();
 
+  useEffect(() => {
+    localStorage.setItem("hasVisited", "true");
+  }, []);
+
   // Save Data
+  useEffect(() => {
+    localStorage.setItem(
+      "analyticData",
+      JSON.stringify(analyticData, (_, v) => (v === undefined ? null : v))
+    );
+  }, [analyticData]);
+
   useEffect(() => {
     localStorage.setItem("streak", streakNumber.toString());
   }, [streakNumber]);
@@ -195,6 +243,7 @@ function App() {
         </Modal>
         <Modal header="Stats" visible={statsModalVisible}>
           <StatsModal
+            data={structuredClone(analyticData)}
             closeEvent={() => {
               setStatsModalVisible(false);
             }}
@@ -309,7 +358,46 @@ function App() {
                   " " +
                   upgradesList[currentMonkeySelected].name;
 
+                analyticData.crosspathsGuessed[
+                  currentMonkeySelected +
+                    ":" +
+                    upgradePathsToString(currentUpgradesSelected)
+                ] =
+                  (analyticData.crosspathsGuessed[
+                    currentMonkeySelected +
+                      ":" +
+                      upgradePathsToString(currentUpgradesSelected)
+                  ] || 0) + 1;
+
+                if (currentGuesses.length == 0) {
+                  analyticData.firstCrosspathGuesses[
+                    currentMonkeySelected +
+                      ":" +
+                      upgradePathsToString(currentUpgradesSelected)
+                  ] =
+                    (analyticData.firstCrosspathGuesses[
+                      currentMonkeySelected +
+                        ":" +
+                        upgradePathsToString(currentUpgradesSelected)
+                    ] || 0) + 1;
+                }
+
                 if (wasCorrect) {
+                  analyticData.totalAttempts[
+                    Math.min(9, currentGuesses.length)
+                  ]++;
+                  analyticData.totalPuzzlesPlayed++;
+
+                  if (
+                    analyticData.lastHighestStreak.streak <
+                    streakNumber + 1
+                  ) {
+                    analyticData.lastHighestStreak.streak = Math.max(
+                      analyticData.lastHighestStreak.streak,
+                      streakNumber + 1
+                    );
+                  }
+
                   setLockGuesses(true);
                   crossPathUpgrade.correctGuess = true;
                   setStreakNumber(streakNumber + 1);
@@ -318,6 +406,18 @@ function App() {
                 currentGuesses.push(crossPathUpgrade);
 
                 if (!wasCorrect && currentGuesses.length >= 10) {
+                  analyticData.totalAttempts[10]++;
+                  analyticData.totalPuzzlesPlayed++;
+
+                  if (analyticData.lastHighestStreak.streak < streakNumber) {
+                    analyticData.lastHighestStreak.streak = Math.max(
+                      analyticData.lastHighestStreak.streak,
+                      streakNumber
+                    );
+                    analyticData.lastHighestStreak.lostDate =
+                      new Date().getTime();
+                  }
+
                   setLockGuesses(true);
                   correctUpgradesList.monkeyGuessed =
                     upgradePathsToString(correctUpgrades) + " " + correctMonkey;
@@ -326,6 +426,7 @@ function App() {
                   setStreakNumber(0);
                 }
 
+                setAnalyticData({ ...analyticData });
                 setLastGuessData([...currentGuesses]);
                 setCurrentGuesses([...currentGuesses]);
               }}

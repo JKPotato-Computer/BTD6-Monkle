@@ -23,3 +23,11 @@
 .accordion-btn-open {
   rotate: 180deg;
 }
+
+.faqBox a {
+  color: white;
+}
+
+.taskRow {
+  width: 100%;
+}

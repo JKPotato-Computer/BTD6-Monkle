@@ -1,6 +1,6 @@
 import upgradesList from "../data/crosspaths.json";
 
-const startDate = new Date(Date.UTC(2025, 7, 1)); // July 1, 2025
+const startDate = new Date(Date.UTC(2025, 7, 2)); // July 1, 2025
 
 const validCrosspaths = [
   "0-0-0",

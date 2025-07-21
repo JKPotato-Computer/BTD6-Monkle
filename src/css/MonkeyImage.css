@@ -9,7 +9,7 @@
 .monkeyImageBorder,
 .monkeyImageOuter,
 .monkeyImageOutermost {
-  width: max-content;
+  width: max-content !important;
   position: relative;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .monkeyImageOutermost {
-  padding: calc(3px * var(--scale));
+  padding: calc(3px * var(--scale)) !important;
   background: linear-gradient(180deg, #01ebfc, #0146b3);
   border: 4px solid #033f57;
 }

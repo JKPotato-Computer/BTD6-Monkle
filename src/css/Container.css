@@ -26,6 +26,13 @@
   color: white;
 }
 
+.container.gray {
+  background: rgb(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  color: white;
+}
+
 #titleContainer > span,
 #titleContainer > span * {
   font-family: "Luckiest Guy";

@@ -32,11 +32,11 @@ function MonkeyImage({ monkey, scale, children }: MonkeyImageProps) {
             <img
               src={
                 upgradeList[monkey as MonkeyType] != null
-                  ? "src/assets/monkeys/" +
+                  ? "assets/monkeys/" +
                     monkey +
                     "/" +
                     upgradeList[monkey as MonkeyType].img
-                  : "src/assets/Quincy.webp"
+                  : "assets/Quincy.webp"
               }
               className="monkeyImage"
               style={{ "--scale": scale || 1 } as React.CSSProperties}

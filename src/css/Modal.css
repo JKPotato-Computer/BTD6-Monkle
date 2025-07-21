@@ -45,7 +45,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 70% !important;
+  width: 90% !important;
   height: max-content !important;
   max-height: 70% !important;
   overflow: auto;
@@ -80,6 +80,13 @@
   border-top: 1px solid rgb(255, 255, 255, 0.25) !important;
 }
 
+.disclaimer {
+  background-color: rgb(255, 255, 0) !important;
+  color: black;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
 @media screen and (max-width: 1450px) and (min-width: 1000px) {
   .headerTitle > span {
     font-size: 4vh !important;
@@ -91,7 +98,7 @@
   }
 
   .modal-content {
-    width: 95% !important;
+    width: 100% !important;
   }
 
   .modal-footer {

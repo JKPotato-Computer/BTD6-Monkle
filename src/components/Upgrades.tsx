@@ -50,7 +50,7 @@ function createCrossPaths(
           typeof monkey[monkeyKeyType] === "object" &&
           monkey[monkeyKeyType] !== null &&
           "img" in (monkey[monkeyKeyType] as any)
-            ? "src/assets/monkeys/" +
+            ? "assets/monkeys/" +
               currentMonkeySelected +
               "/" +
               (monkey[monkeyKeyType] as any).img
@@ -227,10 +227,7 @@ function Upgrades({
               </span>
               <img
                 src={
-                  "src/assets/monkeys/" +
-                  currentMonkeySelected +
-                  "/" +
-                  monkey.img
+                  "assets/monkeys/" + currentMonkeySelected + "/" + monkey.img
                 }
                 height="200px"
                 className="mx-3"
